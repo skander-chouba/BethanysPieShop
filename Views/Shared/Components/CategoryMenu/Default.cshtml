@@ -1,0 +1,16 @@
+﻿<li class="dropdown nav-item">
+    <a asp-controller="Pie" asp-action="Index" class="dropdown-toggle nav-link text-light" data-toggle="dropdown">Pies<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+        @foreach (var category in Model)
+        {
+            <li>
+                <a asp-controller="Pie" asp-action="List" asp-route-category="@category.CategoryName" class="dropdown-item">@category.CategoryName</a>
+            </li>
+        }
+        <li class="dropdown-divider"></li>
+        <li>
+            <a asp-controller="Pie" asp-action="List" class="dropdown-item">View all pies</a>
+        </li>
+        
+    </ul>
+</li>

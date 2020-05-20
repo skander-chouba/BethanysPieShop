@@ -1,0 +1,11 @@
+﻿@model ShoppingCartViewModel
+
+@if (Model.ShoppingCart.ShoppingCartItems.Any())
+{
+    <li class="nav-item">
+        <a class="nav-link text-light">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-status">@Model.ShoppingCart.ShoppingCartItems.Count</span>
+        </a>
+    </li>
+}
